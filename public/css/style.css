@@ -206,7 +206,7 @@ section .title {
 }
 .services .services-content .card .address {
     margin-bottom: 10px;
-    font-size: 18px;
+    font-size: 14px;
     color: #fff;
 }
 
@@ -409,8 +409,19 @@ section .title {
         width: calc(50% - 10px);
         margin-bottom: 20px;
     }
+    /* .services .serv-content .card .text,
+    .services .serv-content .card .text2 {
+        font-size: 16px;
+    } */
 }
-@media (max-width: 860px) {
+
+/* @media (max-width: 1020px) {
+    .services .serv-content .card .text,
+    .services .serv-content .card .text2 {
+        font-size: 14px;
+    }
+} */
+@media (max-width: 1100px) {
     
     .home .home-content .text-2 {
         font-size: 50px;

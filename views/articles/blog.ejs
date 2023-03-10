@@ -7,10 +7,16 @@
     <title>Brandon's Blog</title>
 </head>
 <body>
-    <% articles.forEach(article => { %>
-        <div class="">
-            <%= article.title %>
-        </div>
-    <% }) %>
+    <div class="container">
+        <% articles.forEach(article => { %>
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="article-title"><%= article.title %></h1>
+                    <div class="article-date"><%= article.createdAt.toLocaleDateString() %></div>
+                    <div class="article-description"><%= article.description %></div>
+                </div>
+            </div>
+        <% }) %>
+    </div>
 </body>
 </html>
