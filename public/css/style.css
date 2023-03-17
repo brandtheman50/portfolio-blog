@@ -125,7 +125,24 @@ section .title {
     font-weight: 600;
     margin-left: -3px;
 }
+.home .home-content .blog-btn {
+    display: block;
+    width: 150px;
+    height: 45px;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: rgb(23, 124, 255);
+    color: #fff;
+    font-size: 23px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.home .home-content .blog-btn:hover {
 
+    background-color: rgb(3, 174, 197);
+}
 .about .about-content .left {
     width: 45%;
 }
