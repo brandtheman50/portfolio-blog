@@ -1,0 +1,19 @@
+.container {
+
+}
+
+.card {
+    width: 400px;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 6px;
+    background-color: rgb(241, 241, 241);
+}
+
+.card .card-body {
+    padding: 5px;
+}
+
+.card .card-body .article-title {
+    color: rgb(43, 43, 43);
+}

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/blog.css">
     <title>Brandon's Blog</title>
 </head>
 <body>
@@ -14,6 +15,8 @@
                     <h1 class="article-title"><%= article.title %></h1>
                     <div class="article-date"><%= article.createdAt.toLocaleDateString() %></div>
                     <div class="article-description"><%= article.description %></div>
+                    <div class="article-markdown"><%= article.markdown %></div>
+                    <a class="read-more">Read More</a>
                 </div>
             </div>
         <% }) %>

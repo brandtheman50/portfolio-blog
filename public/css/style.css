@@ -138,9 +138,10 @@ section .title {
     font-weight: 600;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    transition: 0.3s;
 }
 .home .home-content .blog-btn:hover {
-
+    opacity: 1;
     background-color: rgb(3, 174, 197);
 }
 .about .about-content .left {
