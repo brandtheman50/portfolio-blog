@@ -5,21 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Brandon's Blog</title>
 </head>
 <body>
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="logo"><a href="../">Portfolio</a></div>
+        </div>
+    </nav>
     <div class="container">
-        <% articles.forEach(article => { %>
-            <div class="card">
-                <div class="card-body">
-                    <h1 class="article-title"><%= article.title %></h1>
-                    <div class="article-date"><%= article.createdAt.toLocaleDateString() %></div>
-                    <div class="article-description"><%= article.description %></div>
-                    <div class="article-markdown"><%= article.markdown %></div>
-                    <a class="read-more">Read More</a>
-                </div>
+        <div class="blog-header">
+            <h1 class="blog-title">Brandon's Blog</h1>
+            <h4 class="blog-description">Read articles about my coding experiences
+                or projects.
+            </h3>
+        </div>
+        <section class="container-articles">
+            <div class="max-width">
+                <hr>
+                <div class="articles">
+                    <% articles.forEach(article => { %> 
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="image-container">
+                                    <img class="portrait" src="./images/landscape.JPG">
+                                </div>
+                                <h4 class="card-title"><%= article.title %></h4>
+                                <div class="card-date"><%= article.createdAt.toLocaleDateString() %></div>
+                                <div class="card-description"><%= article.description%></div>
+                                <a class="read-more" href="/<%= article.slug %>">Read Article</a>
+                            </div>
+                        </div>
+                    <% }) %>
+                    </div>
             </div>
-        <% }) %>
+        </section>
     </div>
 </body>
 </html>

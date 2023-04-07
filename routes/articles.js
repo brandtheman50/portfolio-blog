@@ -27,7 +27,7 @@ router.post('/', async (req, res) => {
     })
     try{
         article = await article.save()
-        res.redirect(`/articles/${article.slug}`)
+        res.redirect(`/blog/${article.slug}`)
     } catch (e) {
         console.log(e)
         res.render('/')
