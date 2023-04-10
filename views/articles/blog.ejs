@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/blog.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/blog.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Brandon's Blog</title>
 </head>
 <body>
@@ -29,12 +29,12 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="image-container">
-                                    <img class="portrait" src="./images/landscape.JPG">
+                                    <img class="portrait" src="/images/landscape.JPG">
                                 </div>
                                 <h4 class="card-title"><%= article.title %></h4>
                                 <div class="card-date"><%= article.createdAt.toLocaleDateString() %></div>
                                 <div class="card-description"><%= article.description%></div>
-                                <a class="read-more" href="/<%= article.slug %>">Read Article</a>
+                                <a class="read-more" href="/blog/<%= article.slug %>">Read Article</a>
                             </div>
                         </div>
                     <% }) %>
