@@ -37,6 +37,10 @@
                                     <div class="card-date"><%= article.createdAt.toLocaleDateString() %></div>
                                     <div class="card-description"><%= article.description%></div>
                                     <a class="read-more" href="/blog/<%= article.slug %>">Read Article</a>
+                                    <a class="edit" href="/blog/edit/<%= article.id %>">Edit Article</a>
+                                    <form action="/blog/<%= article.id %>?_method=DELETE" method="POST">
+                                        <button type="submit">Delete</button>
+                                    </form>
                                 </div>
                             </div>
                         <% }) %>
