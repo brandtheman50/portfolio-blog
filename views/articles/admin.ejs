@@ -21,9 +21,9 @@
                     or projects.
                 </h3>
             </div>
-            <a class="new-btn" href="/blog/new">New Post</a>
             <section class="container-articles">
                 <div class="max-width">
+                    <a class="new-btn" href="/blog/new">New Post</a>
                     <hr>
                     <div class="articles">
                         <% articles.forEach(article => { %> 
@@ -36,10 +36,12 @@
                                     <div class="card-date"><%= article.createdAt.toLocaleDateString() %></div>
                                     <div class="card-description"><%= article.description%></div>
                                     <a class="read-more" href="/blog/<%= article.slug %>">Read Article</a>
-                                    <a class="edit" href="/blog/edit/<%= article.id %>">Edit Article</a>
-                                    <form action="/blog/<%= article.id %>?_method=DELETE" method="POST">
-                                        <button type="submit">Delete</button>
-                                    </form>
+                                    <div class="admin-btns">
+                                        <a class="edit" href="/blog/edit/<%= article.id %>">Edit</a>
+                                        <form action="/blog/<%= article.id %>?_method=DELETE" method="POST" class="delete">
+                                            <button type="submit">Delete</button>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         <% }) %>
