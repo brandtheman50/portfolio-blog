@@ -78,7 +78,7 @@ router.put('/:id', async (req, res, next) => {
 
 router.delete('/:id', async (req, res) => {
     await Article.findByIdAndDelete(req.params.id)
-    res.redirect('/')
+    res.redirect('/blog/admin')
 })
 function saveArticleAndRedirect(path) {
     return async (req, res) => {
