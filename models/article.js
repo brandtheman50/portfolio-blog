@@ -5,6 +5,7 @@ const slugify = require('slugify')
 const articleSchema = new mongoose.Schema({
     title: {
         type: String,
+        maxLength: 50,
         required: true 
     },
     description: {

@@ -127,7 +127,9 @@ section .title {
     margin-left: -3px;
 }
 .home .home-content .blog-btn {
-    display: block;
+    display: inline-block;
+    position: relative;
+    bottom: 5px;
     width: 150px;
     height: 45px;
     border: none;

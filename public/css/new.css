@@ -1,0 +1,29 @@
+h1 {
+    text-align: center;
+}
+.form-group {
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+}
+.form-control {
+    resize: none;
+    font-size: 16px;
+}
+
+#title {
+    width: 60vh;
+    height: 25px;
+}
+
+#description {
+    width: 65vh;
+    height: 15vh;
+}
+
+#markdown {
+    width: 90%;
+}

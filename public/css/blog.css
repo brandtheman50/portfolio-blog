@@ -71,14 +71,11 @@
     margin-bottom: 10px;
 }
 
-.read-more {
+.read-more, .new-btn {
     position: absolute;
-    bottom: 40px;
     width: 150px;
     height: 40px;
     border-radius: 4px;
-    background: rgb(28, 181, 228);
-    color: black;
     text-align: center;
     margin: auto;
     line-height: 2.25rem;
@@ -86,6 +83,22 @@
     font-weight: 500;
     transition: 0.2s;
 }
+
+.read-more {
+    background: rgb(28, 181, 228);
+    color: black;
+    bottom: 40px;
+}
 .read-more:hover {
     background: rgb(46, 219, 241);
+}
+
+.new-btn {
+    bottom: 120px;
+    background: rgb(38, 189, 38);
+    color: #fff;
+    font-size: 20px;
+}
+.new-btn:hover {
+    background: rgb(67, 219, 67);
 }
