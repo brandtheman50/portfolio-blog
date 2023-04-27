@@ -16,14 +16,38 @@ label {
 
 #title {
     width: 60vh;
-    height: 25px;
+    height: 35px;
 }
 
 #description {
     width: 65vh;
-    height: 15vh;
+    height: 75px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 #markdown {
     width: 90%;
+    height: 20vh;
+}
+
+.btn-cancel {
+    background: rgb(224, 224, 224);
+    padding: 10px 15px;
+    font-size: 22px;
+    border-radius: 4px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.btn-save {
+    padding: 10px 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 4px;
+    border: none;
+    font-size: 22px;
+    background: rgb(26, 110, 221);
+    color: #fff;
+    cursor: pointer;
 }

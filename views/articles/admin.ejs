@@ -23,15 +23,17 @@
             </div>
             <section class="container-articles">
                 <div class="max-width">
-                    <a class="new-btn" href="/blog/new">New Post</a>
+                    <div class="admin-panel">
+                        <a class="new-btn" href="/blog/new">New Post</a>
+                        <form class="logout" action="/blog/logout/" action="POST">
+                            <button id="logout-btn" type="submit">Logout</button>
+                        </form>
+                    </div>
                     <hr>
                     <div class="articles">
                         <% articles.forEach(article => { %> 
                             <div class="card">
                                 <div class="card-body">
-                                    <div class="image-container">
-                                        <img class="portrait" src="/images/landscape.JPG">
-                                    </div>
                                     <h4 class="card-title"><%= article.title %></h4>
                                     <div class="card-date"><%= article.createdAt.toLocaleDateString() %></div>
                                     <div class="card-description"><%= article.description%></div>

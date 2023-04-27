@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/blog.css">
     <title><%= article.title %></title>
 </head>
 <body>
@@ -13,9 +14,11 @@
             <div class="logo"><a href="../blog">Blog</a></div>
         </div>
     </nav>
-    <h1><%= article.title %></h1>
-    <div><%= article.description %></div>
-    <div><%= article.markdown %></div>
-    <div><%= article.createdAt.toLocaleDateString() %></div>
+    <div class="article-container">
+        <h1 id="article-title"><%= article.title %></h1>
+        <h3 id="article-date"><%= article.createdAt.toLocaleDateString('default', {month: 'long', day: 'numeric', year: 'numeric'}) %></h3>
+        <p id="article-description"><%= article.description %></p>
+        <div class="article-markdown"><%- article.markdown %></div> 
+    </div>
 </body>
 </html>

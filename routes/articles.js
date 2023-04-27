@@ -3,7 +3,8 @@ const express = require('express')
 const session = require('express-session')
 const Article = require('./../models/article')
 const router = express.Router()
-let loggedIn = true;
+
+let loggedIn;
 const adminUsername = process.env.ADMIN_USERNAME 
 const adminPassword = process.env.ADMIN_PASSWORD
 
@@ -35,7 +36,7 @@ router.post('/auth', (req, res) => {
 })
 
 router.get('/admin', async (req, res) => {
-    if (loggedIn == true) {
+    if (loggedIn) {
         const articles = await Article.find().sort({
             createdAt: 'desc'
         })
@@ -46,7 +47,7 @@ router.get('/admin', async (req, res) => {
     }
 })
 router.get('/new', (req, res) => {
-    if (loggedIn == true) {
+    if (loggedIn) {
         res.render('articles/new', { article: new Article()});
     }
     else {
@@ -62,8 +63,13 @@ router.get('/:slug', async (req, res) => {
 })
 
 router.get('/edit/:id', async (req, res) => {
-    const article = await Article.findById(req.params.id)
-    res.render('articles/edit', { article: article})
+    if (loggedIn) {
+        const article = await Article.findById(req.params.id)
+        res.render('articles/edit', { article: article})
+    }
+    else {
+        res.redirect('/blog/login')
+    }
 })
 
 router.post('/', async (req, res, next) => {
@@ -72,13 +78,22 @@ router.post('/', async (req, res, next) => {
 }, saveArticleAndRedirect('new'))
 
 router.put('/:id', async (req, res, next) => {
-    req.article = await Article.findById(req.params.id);
-    next()
+    if (loggedIn) {
+        req.article = await Article.findById(req.params.id);
+        next()
+    }
 }, saveArticleAndRedirect('edit'))
 
 router.delete('/:id', async (req, res) => {
-    await Article.findByIdAndDelete(req.params.id)
-    res.redirect('/blog/admin')
+    if (loggedIn) {
+        await Article.findByIdAndDelete(req.params.id)
+        res.redirect('/blog/admin')
+    }
+})
+
+router.post('/logout', (req, res) => {
+    loggedIn = false;
+    res.redirect('/blog/')
 })
 function saveArticleAndRedirect(path) {
     return async (req, res) => {

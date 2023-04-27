@@ -5,10 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/new.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/blog.css">
     <title>New Article</title>
 </head>
 <body>
-    <div class="container">
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="logo"><a href="../blog">Blog</a></div>
+        </div>
+    </nav>
+    <div class="blog-container">
         <h1>New Article</h1>
         <form action="/blog" method="post">
             <%- include('_form_fields') %>
