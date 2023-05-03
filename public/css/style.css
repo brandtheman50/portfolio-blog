@@ -17,7 +17,6 @@ section .title {
     margin-bottom: 40px;
 }
 .about .about-content,
-.skills .skills-content,
 .contact .contact-content{
     display: flex;
     flex-wrap: wrap;
@@ -166,13 +165,13 @@ section .title {
     object-fit: cover;
     border-radius: 6px;
 }
-.services .services-content {
+.projects .projects-content {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
 }
-.services .services-content .card {
+.projects .projects-content .card {
     width: calc(50% - 20px);
     min-height: 300px;
     background-color: rgb(23, 124, 255);
@@ -184,39 +183,39 @@ section .title {
     position: relative;
 }
 
-.services .services-content .card .box{
+.projects .projects-content .card .box{
     transition: all 0.3s ease;
 }
-.services .services-content .card:hover{
+.projects .projects-content .card:hover{
     transform: scale(1.05);
     background-color:rgb(3, 174, 197);
     border: 1px solid rgb(3, 174, 197);
 }
-.services .services-content .card:hover .box{
+.projects .projects-content .card:hover .box{
     transform: scale(1.05);
 }
-.services .services-content .card:hover .i{
+.projects .projects-content .card:hover .i{
     color: #fff;
 }
-.services .services-content .card i {
+.projects .projects-content .card i {
     font-size: 50px;
     margin-bottom: 10px;
     margin-top: 10px;
     color:rgb(200, 208, 245);
     transition: color 0.3 ease;
 }
-.services .services-content .card .service{
+.projects .projects-content .card .service{
     font-size: 20px;
     font-weight: 500px;
     color: #fff;
 }
-.services .services-content .card .text {
+.projects .projects-content .card .text {
     margin: 10px 17px 10px 17px;
     font-size: 18px;
     color: #fff;
 }
 
-.services .services-content .card .text2 {
+.projects .projects-content .card .text2 {
     margin: auto;
     width: 90%;
     font-size: 18px;
@@ -225,19 +224,26 @@ section .title {
     top: 25px;
     
 }
-.services .services-content .card .address {
+.projects .projects-content .card .address {
     margin-bottom: 10px;
     font-size: 14px;
     color: #fff;
 }
 
-.services,
+.projects,
 .contact {
     background: rgb(18, 81, 163);
     font-family: 'Poppins', sans-serif;
 }
 .skills {
     font-family: 'Poppins', sans-serif;
+}
+.skills .skills-content {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+    flex-wrap: wrap;
 }
 .skills .certificates {
     position: relative;
@@ -246,6 +252,59 @@ section .title {
     font-weight: 40px;
     margin-bottom: 20px;
     color: rgb(23, 124, 255);
+}
+
+.skills .flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 280px;
+    margin: 15px;
+    perspective: 1000px;
+}
+
+.skills .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-color: rgb(23, 124, 255);
+    color: black;
+}
+
+.skill-category {
+    color: white;
+    padding: 5px 8px;
+    position: relative;
+    top: 100px;
+    align-items: center;
+}
+
+.list-item {
+    padding: 10px 0;
+    font-size: 18px;
+}
+
+.flip-card-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
 }
 .skills .skills-content .column{
     width: calc(33% - 10px);
@@ -265,7 +324,7 @@ section .title {
 .skills .skills-content .column .description{
     font-size: 20px;
 }
-.services .title,
+.projects .title,
 .contact .title {
     color: #fff;
     font-family: 'Ubuntu', sans-serif;
@@ -383,7 +442,7 @@ section .title {
     }
     .navbar .menu {
         width: 100%;
-        background: rgb(0, 125, 197);
+        background: rgb(18, 81, 163);
         position: absolute;
         top:-250%;
         left:0;
@@ -426,19 +485,19 @@ section .title {
     .contact .contact-content .right{
         flex: 100%;
     }
-    .services .serv-content .card{
+    .projects .serv-content .card{
         width: calc(50% - 10px);
         margin-bottom: 20px;
     }
-    /* .services .serv-content .card .text,
-    .services .serv-content .card .text2 {
+    /* .projects .serv-content .card .text,
+    .projects .serv-content .card .text2 {
         font-size: 16px;
     } */
 }
 
 /* @media (max-width: 1020px) {
-    .services .serv-content .card .text,
-    .services .serv-content .card .text2 {
+    .projects .serv-content .card .text,
+    .projects .serv-content .card .text2 {
         font-size: 14px;
     }
 } */
@@ -447,13 +506,13 @@ section .title {
     .home .home-content .text-2 {
         font-size: 50px;
     }
-    .services .services-content .card {
+    .projects .projects-content .card {
         width: 100%;
         margin-bottom: 20px;
         min-height: 250px;
     }
-    .services .services-content .card .text,
-    .services .services-content .card .text2{
+    .projects .projects-content .card .text,
+    .projects .projects-content .card .text2{
         font-size: 16px;
     }
     .skills .skills-content .column {
@@ -471,7 +530,7 @@ section .title {
     .home .home-content .text-2 {
         font-size: 40px;
     }
-    .services .services-content .card {
+    .projects .projects-content .card {
         min-height: 310px;
     }
 }
