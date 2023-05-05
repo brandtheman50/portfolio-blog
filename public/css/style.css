@@ -203,6 +203,7 @@ section .title {
     margin-top: 10px;
     color:rgb(200, 208, 245);
     transition: color 0.3 ease;
+
 }
 .projects .projects-content .card .service{
     font-size: 20px;
@@ -280,6 +281,7 @@ section .title {
     width: 100%;
     height: 100%;
     -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
     backface-visibility: hidden;
 }
 
