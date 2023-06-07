@@ -181,6 +181,7 @@ section .title {
     transition: all 0.3s ease;
     cursor: pointer;
     position: relative;
+    margin-bottom: 20px;
 }
 
 .projects .projects-content .card .box{
