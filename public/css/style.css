@@ -1,535 +1,90 @@
-*{
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
-}
-section {
-    padding: 100px 0;
-}
-section .title {
-    position: relative;
-    text-align: center;
-    font-size: 40px;
-    font-weight: 40px;
-    padding-bottom: 20px;
-    margin-bottom: 40px;
-}
-.about .about-content,
-.contact .contact-content{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
+    font-size: 16px;
 }
 
-.max-width {
-    max-width: 1300px;
-    padding: 0 80px;
-    margin: auto;
-}
-
-.navbar {
-    position: fixed;
-    width: 100%;
-    padding: 30px 0;
-    background-color: rgb(18, 81, 163);
-    z-index: 999;
-}
-.navbar .max-width {
+.container {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.navbar .logo a {
-    color: #fff;
-    font-size: 35px;
-    font-weight: 600;
-}
-.navbar .menu li {
-    display: inline-block;
-    list-style: none;
-}
-.navbar .menu li a {
-    display: block;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 500;
-    margin-left: 25px;
-    transition: color 0.3s ease;
-}
-.navbar .menu li a:hover{
-    color: crimson;
-}
-.menu-btn{
-    color: #fff;
-    font-size: 30px;
-    display: none;
-    cursor: pointer;
-}
-.home {
-    display: flex;
-    background: rgb(18, 81, 163);
     height: 100vh;
-    color: #fff;
-    min-height: 500px;
-    background-size: cover;
-    background-attachment: fixed;
-}
-.home .max-width {
-    width: 100%;
-    display: flex;
 }
 
-.home i {
-    font-size: 50px;
-    color: white;
-    padding: 20px;
-}
-
-.home .rounded-image {
-    margin-bottom: 30px;
-}
-.home .rounded-image .outer-circle {
-    width: 200px;
-    height: 200px;
-    background: cyan;
-    border-radius: 50%;
-    position: relative;
-    animation: glow 5s infinite;
-}
-
-.home .rounded-image .inner-circle {
-    width: 180px;
-    height: 180px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 50%;
-    margin: auto;
-    top: 10px;
-}
-
-.home .rounded-image .circular-photo {
-    width: 100%;
-    height: auto;
-    max-height: none;
-}
-.home .home-content .text-1 {
-    font-size: 27px;
-}
-.home .home-content .text-2 {
-    font-size: 50px;
-    font-weight: 600;
-    margin-left: -3px;
-}
-.home .home-content .blog-btn {
-    display: inline-block;
-    position: relative;
-    bottom: 5px;
-    width: 150px;
-    height: 45px;
-    border: none;
-    border-radius: 4px;
-    padding: 10px;
-    background-color: rgb(23, 124, 255);
-    color: #fff;
-    font-size: 23px;
-    font-weight: 600;
-    text-align: center;
-    transition: 0.3s;
-}
-.home .home-content .blog-btn:hover {
-    opacity: 1;
-    background-color: rgb(3, 174, 197);
-}
-.about .about-content .left {
-    width: 45%;
-}
-.about .about-content .right {
-    width: 55%;
-}
-.about .about-content .right .text{
-    font-size: 29px;
-    margin-bottom: 10px;
-}
-.about .about-content .right p{
-    font-size: 20px;
-}
-.about .about-content .left img{
-    width: 400px;
-    height: 450px;
-    object-fit: cover;
-    border-radius: 6px;
-}
-.projects .projects-content {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-}
-.projects .projects-content .card {
-    width: calc(50% - 20px);
-    min-height: 300px;
-    background-color: rgb(23, 124, 255);
-    border-radius: 6px;
-    border: 1px solid rgb(23, 124, 255);
-    text-align: center;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    position: relative;
-    margin-bottom: 20px;
-}
-
-.projects .projects-content .card .box{
-    transition: all 0.3s ease;
-}
-.projects .projects-content .card:hover{
-    transform: scale(1.05);
-    background-color:rgb(3, 174, 197);
-    border: 1px solid rgb(3, 174, 197);
-}
-.projects .projects-content .card:hover .box{
-    transform: scale(1.05);
-}
-.projects .projects-content .card:hover .i{
-    color: #fff;
-}
-.projects .projects-content .card i {
-    font-size: 50px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    color:rgb(200, 208, 245);
-    transition: color 0.3 ease;
-
-}
-.projects .projects-content .card .service{
-    font-size: 20px;
-    font-weight: 500px;
-    color: #fff;
-}
-.projects .projects-content .card .text {
-    margin: 10px 17px 10px 17px;
-    font-size: 18px;
-    color: #fff;
-}
-
-.projects .projects-content .card .text2 {
-    margin: auto;
-    width: 90%;
-    font-size: 18px;
-    color: #fff;
-    position: relative;
-    top: 25px;
-    
-}
-.projects .projects-content .card .address {
-    margin-bottom: 10px;
-    font-size: 14px;
-    color: #fff;
-}
-
-.projects,
-.contact {
-    background: rgb(18, 81, 163);
-}
-.skills .skills-content {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    margin: auto;
-    flex-wrap: wrap;
-}
-.skills .certificates {
-    position: relative;
-    text-align: center;
-    font-size: 30px;
-    font-weight: 40px;
-    margin-bottom: 20px;
-    color: rgb(23, 124, 255);
-}
-
-.skills .flip-card {
-    background-color: transparent;
+.sidebar {
     width: 300px;
-    height: 280px;
-    margin: 15px;
-    perspective: 1000px;
-}
-
-.skills .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-}
-
-.flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-}
-
-.flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-}
-
-.flip-card-front {
-    background-color: rgb(23, 124, 255);
-    color: black;
-}
-
-.skill-category {
-    color: white;
-    padding: 5px 8px;
-    position: relative;
-    top: 100px;
+    background-color: #191e23;
+    color: #a5adbb;
+    padding: 20px 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
-.list-item {
-    padding: 10px 0;
-    font-size: 18px;
-}
-
-.flip-card-back {
-    background-color: dodgerblue;
-    color: white;
-    transform: rotateY(180deg);
-}
-.skills .skills-content .column{
-    width: calc(33% - 10px);
-    text-align: center;
-}
-.skills .skills-content .column .skill-category{
-    font-size: 28px; 
-    font-weight: 600;
-    margin-bottom: 10px;   
-}
-
-.skills .skills-content .column .skill-list .skill {
+.sidebar ul {
     list-style: none;
-    font-size: 22px;
+    padding: 0;
+    width: 100%;
 }
-.skills .skills-content .column .description{
-    font-size: 20px;
-}
-.projects .title,
-.contact .title {
-    color: #fff;
-}
-.contact .contact-content .text {
-    font-size: 28px;
-    font-weight: 600;
-    color: #fff;
-    margin-bottom: 20px;
-}
-.contact .contact-content p{
-    color: rgb(221, 221, 221);
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-.contact .contact-content .column{
-    width: calc(50% - 30px);
-}
-.contact .contact-content .left .icons {
-    margin: 10px 0;
-}
-.contact .contact-content .row {
+
+.sidebar li {
+    position: relative;
     display: flex;
-    height: 65px;
-    align-items: center;
-}
-.contact .contact-content .row i{
-    font-size: 28px;
-    color: rgb(0, 208, 245);
-    transition: all 0.3s ease;
+    flex-shrink: 0;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: stretch;
+    border-radius: 6px;
+    padding: 12px;
+    transition: 0.2s;
 }
 
-.contact .contact-content .row .bigger {
-    font-size: 36px;
+.sidebar-link a {
+    color: #a5adbb;
+    text-decoration: none;
 }
-.contact .contact-content .row i:hover{
-    transform: scale(1.5);
+
+.sidebar-link.active {
+    background-color: #15191e;
 }
-.contact .contact-content .row .info {
-    margin-left: 35px;
+
+.sidebar li:hover {
+    background-color: #8f8f8f3a;
 }
-.contact .contact-content .row .head{
-    font-size: 20px;
-    margin-bottom: 5px;
-    font-weight: 500;
-    color: #fff;
+
+.menu {
+    flex: 1;
 }
-.contact .contact-content .row .sub-title{
-    color:rgb(228, 228, 228);
+
+.content {
+    flex: 1;
+    background-color: #1d232a;
+    padding: 100px;
+    box-sizing: border-box;
+    overflow-y: auto;
 }
-.contact .right form .name-fields {
+
+.sidebar-content {
+    width: 100%;
+    margin: auto 0;
+}
+
+.sidebar-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.sidebar-socials {
+    width: 100%;
+    margin-top: auto;
+    text-align: center;
     display: flex;
-}
-.contact .right form .name-fields .name,
-.contact .right form .email {
-    width: 100%;
-    height: 45px;
-    margin-bottom: 20px;
-}
-.contact .right form .message textarea,
-.contact .right form .email input,
-.contact .right form .name-fields input {
-    font-size: 18px;
-    border: 1px solid lightgrey;
-    border-radius: 6px;
-    outline: none;
-    height: 100%;
-    width: 100%;
-    padding-left: 5px;
-}
-.contact .right form .first {
-    margin-right: 10px;
-}
-.contact .right form .message textarea{
-    resize: none;
-    height: 80px;
-    margin-bottom: 20px;
-    padding-top: 10px;
-}
-.contact .right form .send-btn{
-    width: 100px;
-    height: 50px;
-    margin-bottom:20px;
-}
-.contact .right form .send-btn button {
-    width: 100%;
-    height: 100%;
-    font-size: 18px;
-    font-weight: 500;
-    background: rgb(14, 190, 14);
-    border: 2px solid rgb(14, 190, 14);
-    color: #fff;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-.contact .right form .send-btn button:hover{
-    background: rgb(255, 255, 255);
-    color: rgb(18, 81, 163);
-    border: 2px solid rgb(18, 81, 163);
-}
-@media (max-width: 1100px) {
-    .max-width{
-        padding: 0 50px;
-    }
-    .menu-btn i.active:before{
-        content: "\f00d";
-    }
-    .navbar {
-        flex: 1;
-        text-align: left;
-    }
-    .navbar .menu {
-        width: 100%;
-        background: rgb(18, 81, 163);
-        position: absolute;
-        top:-250%;
-        left:0;
-        z-index: 2;
-        text-align: center;
-        transition: all 0.3s ease;
-    }
-    .navbar .menu.active {
-        top: 0;
-    }
-    .navbar .menu li {
-        display: block;
-    }
-    .navbar .menu li a {
-        display: inline-block;
-        margin: 10px 0;
-        color: #fff;
-        font-size: 21px;
-    }
-    .menu-btn {
-        display: block;
-        z-index: 999;
-        color: #fff;
-    }
-    .home .home-content .text-2 {
-        font-size: 40px;
-    }
-    .about .about-content .column,
-    .contact .contact-content .column{
-        width: 100%;
-    }
-    .about .about-content .left img{
-        width: 300px;
-        height: 350px;
-        display: flex;
-        justify-content: center;
-        margin: 0 auto 60px;
-    }
-    .about .about-content .right
-    .contact .contact-content .right{
-        flex: 100%;
-    }
-    .projects .serv-content .card{
-        width: calc(50% - 10px);
-        margin-bottom: 20px;
-    }
-    /* .projects .serv-content .card .text,
-    .projects .serv-content .card .text2 {
-        font-size: 16px;
-    } */
+    justify-content: space-around;
 }
 
-/* @media (max-width: 1020px) {
-    .projects .serv-content .card .text,
-    .projects .serv-content .card .text2 {
-        font-size: 14px;
-    }
-} */
-@media (max-width: 1100px) {
-    
-    .home .home-content .text-2 {
-        font-size: 50px;
-    }
-    .projects .projects-content .card {
-        width: 100%;
-        margin-bottom: 20px;
-        min-height: 250px;
-    }
-    .projects .projects-content .card .text,
-    .projects .projects-content .card .text2{
-        font-size: 16px;
-    }
-    .skills .skills-content .column {
-        width: calc(50% - 10px);
-        margin-bottom: 20px;
-    }
-    .skills .skills-content .column .skill{
-        font-size: 20px;
-    }
-}
-@media (max-width: 500px) {
-    .home .home-content .text-1 {
-        font-size: 20px;
-    }
-    .home .home-content .text-2 {
-        font-size: 40px;
-    }
-    .projects .projects-content .card {
-        min-height: 310px;
-    }
-}
-
-@keyframes glow {
-    50% {
-        box-shadow: 3px 3px 3px cyan;
-        -moz-box-shadow: 0px 0px 3px cyan;
-        -webkit-box-shadow: 0px 0px 20px 10px #0ff;
-        
-    }
+.sidebar-socials a {
+    color: inherit;
 }
