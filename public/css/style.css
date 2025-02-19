@@ -98,10 +98,6 @@ body {
     color: inherit;
 }
 
-.introduction {
-
-}
-
 .text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
@@ -129,4 +125,49 @@ body {
 .py-3 {
     padding-top: .75rem;
     padding-bottom: .75rem;
+}
+
+.full-btn-cont {
+    display: flex;
+    gap: 16px;
+}
+
+.gray-btn,
+.black-btn {
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+.black-btn {
+    color: #ffff;
+    background-color: #191e24;
+}
+
+.gray-btn {
+    color: #FFFF;
+    background-color: #1d232a;
+    border: 1px solid #a6adbb;
+}
+
+.project-cont {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    max-width: 80rem;
+    padding: 1rem;
+    flex-direction: row;
+}
+
+.post-img {
+    border-radius: 0.5rem;
+    max-width: 13rem;
+    height: auto;
+    display: block;
+}
+
+.post-description {
+    flex-grow: 1;
 }
