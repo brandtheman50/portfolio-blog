@@ -13,6 +13,10 @@ body {
     height: 100vh;
 }
 
+section {
+    margin-bottom: 2rem;
+}
+
 .sidebar {
     width: 300px;
     background-color: #191e23;
@@ -101,6 +105,7 @@ body {
 .text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+    margin-bottom: 1rem;
 }
 
 .py-1 {
@@ -111,6 +116,7 @@ body {
 .text-5xl {
     font-size: 3rem;
     line-height: 1;
+    margin-bottom: 0.5rem;
 }
 
 .font-bold {
@@ -122,6 +128,10 @@ body {
     line-height: 2.25rem;
 }
 
+.py-2 {
+    margin-bottom: 1.5rem;
+}
+
 .py-3 {
     padding-top: .75rem;
     padding-bottom: .75rem;
@@ -130,6 +140,10 @@ body {
 .full-btn-cont {
     display: flex;
     gap: 16px;
+}
+
+.margin-top {
+    margin-top: 5rem;
 }
 
 .gray-btn,
@@ -162,7 +176,6 @@ body {
 }
 
 .post-img {
-    border-radius: 0.5rem;
     max-width: 13rem;
     height: auto;
     display: block;
