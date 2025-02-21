@@ -21,6 +21,8 @@ section {
 }
 
 .sidebar {
+    position: fixed;
+    height: 100vh;
     width: 300px;
     background-color: #191e23;
     padding: 20px 15px;
@@ -68,11 +70,12 @@ section {
 .content-cont {
     flex: 1;
     display: flex;
+    margin-left: 18.75rem;
     justify-content: center;
-    padding: 20px;
     background-color: #1d232a;
     box-sizing: border-box;
     overflow-y: auto;
+    padding: 12px;
 }
 
 .content {
@@ -173,11 +176,17 @@ section {
     gap: 1rem;
     align-items: center;
     justify-content: center;
-    max-width: 80rem;
+    max-width: 1200px;
     padding: 1rem;
     flex-direction: row;
     text-decoration: none;
     color: #a5adbb;
+    flex-wrap: nowrap;
+}
+
+.my-0 {
+    margin: 0;
+    padding: 0;
 }
 
 .post-img {
@@ -195,4 +204,23 @@ section {
 
 .post-description {
     flex-grow: 1;
+}
+
+@media (max-width: 1024px) {
+    .content-cont {
+        margin-left: 0;
+    }
+    .sidebar {
+        left: -300px;
+    }
+
+}
+
+@media (max-width: 712px) {
+    .project-cont {
+        flex-wrap: wrap;
+    }
+    .post-img {
+        max-width: 100%;
+    }
 }
