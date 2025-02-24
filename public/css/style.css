@@ -11,6 +11,15 @@ body {
     color: #a5adbb;
 }
 
+a {
+    text-decoration: none;
+    color: #a5adbb;
+}
+
+.navbar {
+    display: none;
+}
+
 .container {
     display: flex;
     height: 100vh;
@@ -30,6 +39,12 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: left 0.3s ease-in-out;
+    z-index: 1001;
+}
+
+#menu-toggle {
+    background-color: none;
 }
 
 .sidebar ul {
@@ -38,7 +53,7 @@ section {
     width: 100%;
 }
 
-.sidebar li {
+.sidebar ul a {
     position: relative;
     display: flex;
     flex-shrink: 0;
@@ -50,7 +65,7 @@ section {
     transition: 0.2s;
 }
 
-.sidebar-link a {
+.sidebar-link {
     color: #a5adbb;
     text-decoration: none;
 }
@@ -59,7 +74,7 @@ section {
     background-color: #15191e;
 }
 
-.sidebar li:hover {
+.sidebar-link:hover {
     background-color: #8f8f8f3a;
 }
 
@@ -75,7 +90,6 @@ section {
     background-color: #1d232a;
     box-sizing: border-box;
     overflow-y: auto;
-    padding: 12px;
 }
 
 .content {
@@ -149,7 +163,7 @@ section {
 }
 
 .margin-top {
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 
 .gray-btn,
@@ -163,6 +177,11 @@ section {
 .black-btn {
     color: #ffff;
     background-color: #191e24;
+    transition: 0.2s ease-in;
+}
+
+.black-btn:hover {
+    background-color: #0f1215;
 }
 
 .gray-btn {
@@ -214,10 +233,6 @@ section {
     list-style: none;
 }
 
-.skills-cont {
-}
-
-
 .skill-category {
     text-align: center;
     font-weight: 500;
@@ -235,15 +250,58 @@ section {
 
 .skills-menus {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 @media (max-width: 1024px) {
     .content-cont {
         margin-left: 0;
+        padding: 0 12px;
     }
     .sidebar {
         left: -300px;
+    }
+    .sidebar.active {
+        left: 0;
+    }
+    .navbar {
+        display: flex;
+        position: fixed;
+        background-color: #1d232ae6;
+        width: 100%;
+        margin: 0;
+        font-size: 24px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .navbar svg {
+        cursor: pointer;
+    }
+    
+    .nav-content {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 24px 24px;
+        align-items: center;
+    }
+    /* Overlay effect */
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Dark overlay effect */
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease-in-out;
+        z-index: 1000; /* Behind sidebar */
+    }
+
+    /* Show overlay when sidebar is active */
+    .sidebar.active ~ .overlay {
+        opacity: 1;
+        visibility: visible;
     }
 
 }
